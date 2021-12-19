@@ -54,8 +54,9 @@ export default function App() {
           todoText={todoText}
           onChange={onChangeTodoText}
           onClick={onClickAdd}
+          disabled={incompleteTodos.length >= 5}
         />
-
+        {incompleteTodos.length >= 5 && <p>todos 5 </p>}
         <IncompleteTodos
           incompleteTodos={incompleteTodos}
           onClickComplete={onClickComplete}
